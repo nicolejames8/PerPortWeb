@@ -1,0 +1,356 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle-container,
+.welcome-container {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.drawer.open {
+    display: flex;
+}
+
+.drawer ul {
+    margin-top: 20px;
+}
+
+.drawer li {
+    margin-bottom: 10px;
+}
+
+.drawer {
+    background-color: #1c1c1c;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.drawer a {
+    color: #ffcc00;
+}
+
+.drawer a:hover {
+    color: #fff;
+}
+
+.drawer h2 {
+    color: #ffcc00;
+}
+
+.drawer p {
+    color: #fff;
+}
+
+.drawer-avatar {
+    border: 2px solid #ffcc00;
+}
+
+#closeDrawer {
+    color: #ffcc00;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.social-icons i {
+    color: #ffcc00;
+}
+
+.drawer a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.drawer a:hover {
+    color: #ffcc00;
+}
+
+.drawer a img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.drawer h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.drawer p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.drawer-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#closeDrawer {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-container {
+    max-width: 60%;
+}
+
+.image-container {
+    position: relative;
+}
+
+#profileImage {
+    max-width: 100%;
+    border: 2px solid #555;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#meButton {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#about {
+    background-color: #1c1c1c;
+}
+
+.text-container {
+    color: #fff;
+}
+
+#meButton {
+    background-color: #ffcc00;
+    color: #1c1c1c;
+}
+
+.image-container {
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#projects {
+    background-color: #2d2d2d;
+}
+
+.project-panel {
+    transition: transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.project-panel:hover {
+    transform: scale(1.05);
+    border-color: #ffcc00;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-panel {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid #555;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.project-panel img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project-panel:hover img {
+    transform: scale(1.1);
+}
+
+.project-panel:hover .overlay {
+    opacity: 1;
+}
+
+#contact {
+    background-color: #1a1a1a;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+}
+
+.bisu-logo {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-shape,
+.footer-shape-right {
+    position: absolute;
+    width: 310px;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+.footer-shape-right {
+    right: 0;
+}
+
+.bisu-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i {
+    margin: 0 10px;
+}
+
+#about h2,
+#projects h2,
+#contact h2 {
+    color: #ffcc00;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}

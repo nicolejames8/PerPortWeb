@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole James Paguican's Portfolio</title>
+    <link rel="shortcut icon" type="x-icon" href="bisu.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1ce5845f45.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body> 
+    <header>   
+        <div class="menu-container">
+            <div class="circle-container" onclick="toggleDrawer()">
+                <img src="circle.jpg" alt="Menu" class="avatar">
+            </div>
+           
+            <div class="welcome-container">
+                <img src="bisu.png" alt="Bisu Logo" class="bisu-logo">
+                <h1>WELCOME!</h1>
+            </div>
+        </div>
+        <nav class="drawer">
+            <div id="closeDrawer" onclick="toggleDrawer()">X</div>
+            <img src="circle.jpg" alt="Menu" class="avatar drawer-avatar">
+            <h2>Nicole James Paguican</h2>
+            <ul>
+                <li><a href="#" onclick="showSection('about')"><i class="fa-solid fa-angle-down"></i> About Me</a></li>
+                <li><a href="#" onclick="showSection('projects')"> <i class="fa-solid fa-angle-down"></i>Projects</a></li>
+                <li><a href="#" onclick="showSection('contact')"> <i class="fa-solid fa-angle-down"></i>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="content-section">
+            <div class="content-container">
+                <div class="text-container">
+                    <h2><i class="fa-solid fa-circle-user"></i>About Me</h2>
+                    <p>Welcome to my personal portfolio! I'm Nicole James Paguican, born on September 08, 2002, in Can-upao, Jagna, Bohol. I'm 5'7" tall and weigh 56kg. My interests include gaming, anime/movies, and books. I excel in gaming and deductive reasoning.</p>
+                    <button id="meButton" onclick="toggleImage()">CLICK ME</button>
+                </div>
+                <div class="image-container" id="imageContainer"></div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2><i class="fa-brands fa-github"></i>Projects</h2> 
+            <div id="projectContainer" class="project-container">
+                <div class="project-panel" onclick="toggleSketchUpImage()">
+                    <img src="sketch.png" alt="Sketch Image" width="300" height="200">
+                    <div class="overlay">
+                        <p>Click to see more</p>
+                    </div>
+                </div>
+
+                <div class="project-panel" style="display: none;" onclick="toggleSketchUpImage()">
+                    <img src="up.png" alt="Up Image" width="300" height="200">
+                    <div class="overlay">
+                        <p>Click to see more</p>
+                    </div>
+                </div>
+
+                <div class="project-panel" onclick="toggleCRUDJavaImage()">
+                    <img src="crud.png" alt="CRUD Image" width="300" height="200">
+                    <div class="overlay">
+                        <p>Click to see more</p>
+                    </div>
+                </div>
+
+                <div class="project-panel" style="display: none;" onclick="toggleCRUDJavaImage()">
+                    <img src="jav.png" alt="Java Image" width="300" height="200">
+                    <div class="overlay">
+                        <p>Click to see more</p>
+                    </div>
+                </div>
+
+                <div class="project-panel" onclick="toggleLogicImage()">
+                    <img src="logic.png" alt="Logic Image" width="300" height="200">
+                    <div class="overlay">
+                        <p>Click to see more</p>
+                    </div>
+                </div>
+
+                <div class="project-panel" style="display: none;" onclick="toggleCircuitImage()">
+                    <img src="circuit.png" alt="Circuit Image" width="300" height="200">
+                    <div class="overlay">
+                        <p>Click to see more</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2><i class="fa-solid fa-shield-cat"></i>Contact</h2>
+            
+            <form id="contactForm" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-shape"></div>
+        <div class="footer-shape-right"></div>
+        <div class="social-icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>&copy; Nicole James Paguican</p>
+        <img src="bisu.png" alt="Bisu Logo" class="bisu-logo">
+    </footer>
+</body>
+</html>
